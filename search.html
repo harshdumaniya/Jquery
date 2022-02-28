@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function(){
+           $("#myInput").on("keyup", function() {
+             var value = $(this).val().toLowerCase();
+             $("#myList li").filter(function() {
+               $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+             });
+           });
+         });
+      </script>
+   </head>
+   <body>
+      <h2>Country</h2>
+      <input id="myInput" type="text" placeholder="Search">
+      <br>
+      <ul id="myList">
+         <li>India</li>
+         <li>Israel</li>
+         <li>China</li>
+         <li>Russia</li>
+         <li>America</li>
+         <li>Japan</li>
+         <li>Sri Lanka</li>
+         <li>Canada</li>
+		 <li>Germany</li>
+      </ul>
+   </body>
+</html>
